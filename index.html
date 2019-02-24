@@ -1,0 +1,764 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+
+
+<head>
+    <!--====== USEFULL META ======-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dawat Restaurant is a simple restaraunt website for restaurant business" />
+    <meta name="keywords"
+        content="restaurant, pizza, burger, business, house, online, delevery, html, coffee, cafe, bar" />
+    <meta name="author" content="BDEXPERT" />
+
+    <!--====== TITLE TAG ======-->
+    <title>The Food Train</title>
+
+    <!--====== FAVICON ICON =======-->
+    <link rel="shortcut icon" type="image/ico" href="img/favicon.jpg" />
+
+    <!--====== STYLESHEETS ======-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/pogo-slider.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/timepicker.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <!--====== MAIN STYLESHEETS ======-->
+    <link href="style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .zoom {
+            padding: 50px;
+            transition: transform .1s;
+            width: 350px;
+            height: 500px;
+            margin: 0 auto;
+        }
+
+        .zoom:hover {
+            -ms-transform: scale(1.5);
+            -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+        }
+
+        .main_h {
+            position: fixed;
+            top: 0px;
+            max-height: 70px;
+            z-index: 999;
+            width: 100%;
+            padding-top: 17px;
+            background: none;
+            overflow: hidden;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            opacity: 0;
+            top: -100px;
+            padding-bottom: 6px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        @media only screen and (max-width: 766px) {
+            .main_h {
+                padding-top: 25px;
+            }
+        }
+
+        .open-nav {
+            max-height: 400px !important;
+        }
+
+        .open-nav .mobile-toggle {
+            transform: rotate(-90deg);
+            -webkit-transform: rotate(-90deg);
+        }
+
+        .sticky {
+            background-color: rgba(255, 255, 255, 0.93);
+            opacity: 1;
+            top: 0px;
+            border-bottom: 1px solid gainsboro;
+        }
+
+        .logo {
+            width: 50px;
+            font-size: 25px;
+            color: #8f8f8f;
+            text-transform: uppercase;
+            float: left;
+            display: block;
+            margin-top: 0;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        @media only screen and (max-width: 766px) {
+            .logo {
+                float: none;
+                margin-top: -7px;
+            }
+        }
+
+        nav {
+            float: right;
+            width: 60%;
+        }
+
+        @media only screen and (max-width: 766px) {
+            nav {
+                width: 100%;
+            }
+        }
+
+        nav ul {
+            list-style: none;
+            overflow: hidden;
+            text-align: right;
+            float: right;
+        }
+
+        @media only screen and (max-width: 766px) {
+            nav ul {
+                padding-top: 10px;
+                margin-bottom: 22px;
+                float: left;
+                text-align: center;
+                width: 100%;
+            }
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-left: 35px;
+            line-height: 1.5;
+        }
+
+        @media only screen and (max-width: 766px) {
+            nav ul li {
+                width: 100%;
+                padding: 7px 0;
+                margin: 0;
+            }
+        }
+
+        nav ul a {
+            color: #888888;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .mobile-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 20px;
+            position: absolute;
+            right: 22px;
+            top: 0;
+            width: 30px;
+            -webkit-transition: all 200ms ease-in;
+            -moz-transition: all 200ms ease-in;
+            transition: all 200ms ease-in;
+        }
+
+        @media only screen and (max-width: 766px) {
+            .mobile-toggle {
+                display: block;
+            }
+        }
+
+        .mobile-toggle span {
+            width: 30px;
+            height: 4px;
+            margin-bottom: 6px;
+            border-radius: 1000px;
+            background: #8f8f8f;
+            display: block;
+        }
+
+        .row {
+            width: 100%;
+            max-width: 940px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 2%;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            color: #8f8f8f;
+            background: white;
+            font-family: "Cardo", serif;
+            font-weight: 300;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 30px;
+            line-height: 1.8;
+            text-transform: uppercase;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .content {
+            padding: 50px 2% 250px;
+        }
+
+        .hero {
+            position: relative;
+            background: url(http://www.philippefercha.com/cd/toggle-menu-bg.jpg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            text-align: center;
+            color: #fff;
+            padding-top: 110px;
+            min-height: 500px;
+            letter-spacing: 2px;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            line-height: 1.3;
+        }
+
+        .hero h1 span {
+            font-size: 25px;
+            color: #e8f380;
+            border-bottom: 2px solid #e8f380;
+            padding-bottom: 12px;
+            line-height: 3;
+        }
+
+        .mouse {
+            display: block;
+            margin: 0 auto;
+            width: 26px;
+            height: 46px;
+            border-radius: 13px;
+            border: 2px solid #e8f380;
+            position: absolute;
+            bottom: 40px;
+            position: absolute;
+            left: 50%;
+            margin-left: -26px;
+        }
+
+        .mouse span {
+            display: block;
+            margin: 6px auto;
+            width: 2px;
+            height: 2px;
+            border-radius: 4px;
+            background: #e8f380;
+            border: 1px solid transparent;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+            -webkit-animation-name: scroll;
+            animation-name: scroll;
+        }
+
+        @-webkit-keyframes scroll {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(20px);
+                transform: translateY(20px);
+            }
+        }
+
+        @keyframes scroll {
+            0% {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+            100% {
+                opacity: 0;
+                -webkit-transform: translateY(20px);
+                -ms-transform: translateY(20px);
+                transform: translateY(20px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!--- PRELOADER -->
+    <div class="preeloader">
+        <div class="preloader-spinner"><i class="fa fa-cutlery"></i></div>
+    </div>
+
+    <!--SCROLL TO TOP-->
+    <a href="#home" class="scrolltotop"><i class="fa fa-long-arrow-up"></i></a>
+
+    <!--START TOP AREA-->
+    
+            <!--MAINMENU AREA-->
+            <header class="main_h">
+
+                <div class="row">
+                    <a href="#home" class="logo"><img src="icon.jpg" alt="logo"></a>
+                    <div class="mobile-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li class="active"><a href="#home">Home</a> </li>
+                            <li><a href="#about">about us</a></li>
+
+                            <li><a href="#menu">Menu</a></li>
+
+                            <li><a href="#gallery">Gallery</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                </div> <!-- / row -->
+
+            </header>
+            <!--END MAINMENU AREA END-->
+        </div>
+
+        <!--HHOME SLIDER AREA-->
+        <div class="slider-area">
+            <div class="pogoSlider">
+                <div class="pogoSlider-slide" data-transition="fade" data-duration="1500"
+                    style="background:url(img/slider/slide_1.png) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">The
+                        <br>Food <br>Train</h2>
+                    <!-- <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500"><span>Food</span><br> Train</h1>-->
+
+                </div>
+                <div class="pogoSlider-slide" data-transition="fade"
+                    style="background:url(img/slider/slide_2.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">First
+                        Ever <br>BBQ Engine Smoker</h2>
+                    <!--  <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">BBQ<span>Engine</span> Smoker</h1>-->
+
+                </div>
+                <div class="pogoSlider-slide" data-transition="fade"
+                    style="background:url(img/slider/slide_3.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">We
+                        undertake <br>Party <br>& <br>Catering Orders</h2>
+                    <!--    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">Party</h1> <span>&</span>Catering Orders</h1>-->
+
+                </div>
+            </div>
+        </div>
+        <!--HOME SLIDER AREA END-->
+
+    </header>
+    <!--END TOP AREA-->
+
+    <!--ABOUT AREA-->
+    <section class="about-area section-padding" id="about">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="area-title text-center">
+                        <h2>About The Food Train !</h2>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="about-content">
+                        <p><span class="big-text">T</span>he Food Train is basically a startup by Akhil Maniyil in the
+                            year 2018.The main attraction of this restaurant is the engine where all the barbeque items
+                            are made. The continuation of this train will be its compartments which will be opened in
+                            and around the city where the same tradition of cooking will be done. </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="right-about-content">
+                        <p>Our food is prepared as per the customer's requirement of spices and the taste.You are
+                            guarnteed the freshness of your order.The BBQ items are prepared inside the BBQ smokers
+                            (steam engine replica).We use charcoal briquettes as the fuel and fire power for cooking.If
+                            you love a good outdoor relaxing atmosphere,then this the placefor you.A place dedicated to
+                            your favourite people in the world-your gangs !! </p>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="about-author-sign text-center">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ABOUT AREA END-->
+
+    <!--SPEACIAL PROMOTIONS AREA-->
+    <section class="promotions-area section-padding" id="promotion">
+        <div class="promotion-area-bg" data-stellar-background-ratio="0.6"></div>
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="area-title text-center">
+                        <h2>Special Package</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="menu-discount-offer col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="single-promotions">
+                        <div class="promotions-img">
+                            <img src="img/promotions/promo_slide_1.jpg" alt="">
+                        </div>
+                        <div class="promotions-details">
+                            <i class="fa fa-map-pin" aria-hidden="true" style="font-size:25px;color:rgb(0, 0, 0)"></i>
+
+                            <h3>Barbeque Nights</h3>
+                            <p>Every Monday - Saturday 6 PM to 10PM</p>
+
+                        </div>
+                    </div>
+                    <!--  <div class="single-promotions">
+                        <div class="promotions-img">
+                            <img src="img/promotions/promo_slide_2.jpg" alt="">
+                        </div>
+                        <div class="promotions-details">
+                            <h3>40% off for 9'' - 12'' pizza - Wed, Thu, Friday only</h3>
+                            <p>Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000</p>
+                            <a href="#" class="read-more">Order now</a>
+                        </div>
+                    </div>-->
+                    <!---->
+                    <div class="single-promotions">
+                        <div class="promotions-img">
+                            <img src="img/promotions/promo_slide_3.jpg" alt="">
+                        </div>
+                        <div class="promotions-details">
+                            <h3>40% off for 9'' - 12'' pizza - Wed, Thu, Friday only</h3>
+                            <p>Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000</p>
+                            <a href="#" class="read-more">Order now</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--SPEACIAL PROMOTIONS AREA END-->
+
+    <!--MENUS AREA-->
+    <section class="menus-area section-padding" id="menu">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="area-title text-center">
+                        <h2> menu</h2>
+                    </div>
+                </div>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="zoom">
+                <img src="img/menu/menu_1.jpeg" alt="" width="270" height="900"></div>
+            <div class="zoom">
+                <img src="img/menu/menu_2.jpeg" alt="" width="270" height="900"></div>
+            <div class="zoom">
+                <img src="img/menu/menu_3.jpeg" alt="" width="270" height="900"></div>
+            <div class="zoom">
+                <img src="img/menu/menu_4.jpeg" alt="" width="270" height="900"></div>
+
+
+
+
+
+            <!--
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="food-menu-list-menu">
+                        <ul>
+                            <li class="filter active" data-filter="all">All</li>
+                            <li class="filter" data-filter=".breakfast">Breakfast</li>
+                            <li class="filter" data-filter=".lunch">Lunch</li>
+                            <li class="filter" data-filter=".dinner">Dinner</li>
+                            <li class="filter" data-filter=".bbq">BBQ</li>
+                           <!-- <li class="filter" data-filter=".snacks">Snacks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row food-menu-list">
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast coffee snacks">
+                    <div class="single-menu-details">
+                        <div class="food-menu-img"><img src="img/menu/menu_1.jpg" alt=""></div>
+                        <div class="food-menu-details">
+                            <h3>Cupcake Recipes <span class="menu-price">$20.00</span></h3>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu dinner snacks">
+                    <div class="single-menu-details">
+                        <div class="food-menu-img"><img src="img/menu/menu_2.jpg" alt=""></div>
+                        <div class="food-menu-details">
+                            <h3>Cupcake Recipes <span class="menu-price">$22.00</span></h3>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast">
+                    <div class="single-menu-details">
+                        <div class="food-menu-img"><img src="img/menu/menu_3.jpg" alt=""></div>
+                        <div class="food-menu-details">
+                            <h3>Cupcake Recipes <span class="menu-price">$17.00</span></h3>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu dinner lunch breakfast snacks">
+                    <div class="single-menu-details">
+                        <div class="food-menu-img"><img src="img/menu/menu_4.jpg" alt=""></div>
+                        <div class="food-menu-details">
+                            <h3>Cupcake Recipes <span class="menu-price">$28.00</span></h3>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu lunch coffee">
+                    <div class="single-menu-details">
+                        <div class="food-menu-img"><img src="img/menu/menu_5.jpg" alt=""></div>
+                        <div class="food-menu-details">
+                            <h3>Cupcake Recipes <span class="menu-price">$120.00</span></h3>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast">
+                    <div class="single-menu-details">
+                        <div class="food-menu-img"><img src="img/menu/menu_6.jpg" alt=""></div>
+                        <div class="food-menu-details">
+                            <h3>Cupcake Recipes <span class="menu-price">$100.00</span></h3>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+            <!--MENUS AREA END-->
+
+
+        </div>
+        </div>
+        </div>
+    </section>
+
+
+    <!--INSTAGRAM GALLERY FEED-->
+    <section class="gallery-area section-padding" id="gallery">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="area-title text-center">
+                        <h2>Gallery</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+            <img src="img/gallery/om_1.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_2.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_3.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_4.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_5.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_6.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_7.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_9.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_10.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_11.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_12.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+            <img src="img/gallery/om_13.jpg" alt="" width="300" height="300" style="width:24%;height:auto;margin:2px;">
+        </div>
+        </div>
+    </section>
+    <!--INSTAGRAM GALLERY FEED END-->
+
+    <!--FOOER AREA-->
+    <div class="footer-area" id="contact">
+        <div class="footer-area-bg" data-stellar-background-ratio="0.6"></div>
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="footer-top section-padding text-center">
+                        <div class="footer-logo">
+                            <a href="#"><img src="img/main_logo.png" alt=""></a>
+                        </div>
+                        <div class="footer-address">
+                            <p>Adjacent to TCS Adibatla , Hyderabad , Telengana</p>
+                            <p><a href="mailto:thefoodtrain3008@gmail.com">thefoodtrain3008@gmail.com</a></p>
+                            <p><a href="callto:+91 91820 56107">+91 91820 56107 </a></p>
+                        </div>
+                        <div class="footer-social-bookmark">
+                            <ul>
+                                <li><a href="https://m.facebook.com/The-Food-Train-372415413585878/?ref=content_filter"><i
+                                            class="fa fa-facebook"></i></a></li>
+                                <li><a
+                                        href="https://instagram.com/akhil_the_food_train?utm_source=ig_profile_share&igshid=amriact7957h"><i
+                                            class="fa fa-instagram"></i></a></li>
+
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="footer-menu">
+                        <ul>
+
+                            <li><a
+                                    href="https://www.google.com/maps/place/The+Food+Train/@17.2335075,78.5634431,15.33z/data=!4m8!1m2!2m1!1sthe+food+train!3m4!1s0x3bcba52200a22337:0x52a44c7cacb99356!8m2!3d17.2340954!4d78.5634841">SiteMap</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                    <div class="footer-copyright">
+                        <p>&copy; 2019 <a href="#">The Food Train</a> All Right Reserved.</p>
+                        <p>Designed by Lakshman & Bhanu</p>
+                        <a href="https://www.webfreecounter.com/" target="_blank"><img
+                                src="https://www.webfreecounter.com/hit.php?id=zunqck&nd=6&style=1"
+                                alt="web counter"></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FOOER AREA END-->
+
+
+    <!--====== SCRIPTS JS ======-->
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+
+    <!--====== PLUGINS JS ======-->
+    <script src="js/vendor/jquery.easing.1.3.js"></script>
+    <script src="js/vendor/jquery-migrate-1.2.1.min.js"></script>
+    <script src="js/jquery.pogo-slider.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/stellar.js"></script>
+    <script src="js/jquery.mixitup.min.js"></script>
+    <script src="js/instafeed.min.js"></script>
+    <script src="js/datepicker.min.js"></script>
+    <script src="js/timepicker.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.sticky.js"></script>
+
+    <!--===== ACTIVE JS=====-->
+    <script src="js/main.js"></script>
+    <script>
+        // Sticky Header
+        $(window).scroll(function () {
+
+            if ($(window).scrollTop() > 100) {
+                $('.main_h').addClass('sticky');
+            } else {
+                $('.main_h').removeClass('sticky');
+            }
+        });
+
+        // Mobile Navigation
+        $('.mobile-toggle').click(function () {
+            if ($('.main_h').hasClass('open-nav')) {
+                $('.main_h').removeClass('open-nav');
+            } else {
+                $('.main_h').addClass('open-nav');
+            }
+        });
+
+        $('.main_h li a').click(function () {
+            if ($('.main_h').hasClass('open-nav')) {
+                $('.navigation').removeClass('open-nav');
+                $('.main_h').removeClass('open-nav');
+            }
+        });
+
+        // navigation scroll lijepo radi materem
+        $('nav a').click(function (event) {
+            var id = $(this).attr("href");
+            var offset = 70;
+            var target = $(id).offset().top - offset;
+            $('html, body').animate({
+                scrollTop: target
+            }, 500);
+            event.preventDefault();
+        });
+    </script>
+</body>
+
+
+
+</html>
